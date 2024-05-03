@@ -30,13 +30,13 @@ BIN_DIR 	 = $(SRCROOT)/binary
 
 # vpath is used so object files are written to the current directory instead
 # of the same directory as their source files
-vpath  = %.c $(SRCROOT)/Libraries/STM32F4xx_StdPeriph_Driver/src
-vpath += %.c $(SRCROOT)/Libraries/syscall
-vpath += %.c $(SRCROOT)/hardware
-vpath += %.c $(FREERTOS)
-vpath += %.c $(FREERTOS)/portable/MemMang
-vpath += %.c $(FREERTOS)/portable/GCC/ARM_CM4F
-vpath += %.s $(STARTUP)
+vpath  %.c $(SRCROOT)/Libraries/STM32F4xx_StdPeriph_Driver/src
+vpath  %.c $(SRCROOT)/Libraries/syscall
+vpath  %.c $(SRCROOT)/hardware
+vpath  %.c $(FREERTOS)
+vpath  %.c $(FREERTOS)/portable/MemMang
+vpath  %.c $(FREERTOS)/portable/GCC/ARM_CM4F
+vpath  %.s $(STARTUP)
 
 #In the provided makefile, the vpath directive is used to specify additional directories where the make utility should search for source files. However, the vpath variable itself is not printed directly because it's a special variable in makefiles that holds the search paths but isn't directly accessible for printing like regular variables.
 
