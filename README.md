@@ -4,6 +4,7 @@ This repository contains FreeRtos porting for STM32F4 board.
 https://github.com/wangyeee/STM32F4-FreeRTOS
 
 blue board-->stm32f411e (MB1115D)
+
 green board-->stm32f411e (Mb1115B)
 
 Setting the Work Bench 
