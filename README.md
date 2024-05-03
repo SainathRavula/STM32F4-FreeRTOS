@@ -12,12 +12,16 @@ Setting the Work Bench
 Toolchain for arm cortex-m
 ===========================
 
--->installing gcc-arm-none-eabi toolchain using, "sudo apt install gcc-arm-none-eabi" -->[ps:don't install it like this GDB debugger is not working] 
+Installing gcc-arm-none-eabi toolchain using, "sudo apt install gcc-arm-none-eabi" -->[ps:don't install it like this GDB debugger is not working] 
 -This toolchain provides the GNU Compiler Collection (GCC) targeting the ARM architecture without any embedded operating system (bare-metal)
 specifically for ARM Cortex-M and Cortex-R processors.
+
 -This toolchain is widely used in embedded development for ARM microcontrollers, including STM32 devices.
+
 -It produces executable binaries that are compatible with the ARM architecture used in these microcontrollers.
+
 -ARM Cortex-M microcontrollers use a different architecture than typical desktop or server CPUs (e.g., x86). Therefore, you need a specialized toolchain like arm-none-eabi-gcc to generate code that runs on these microcontrollers.
+
 -standard GCC compiler on our system doesn't recognize ARM-specific instructions or peripheral registers,so errors will be produced.
 
  -->Follow youtube video "https://www.youtube.com/watch?v=imUiQkO9YHM from 2:21 to 7:55"
