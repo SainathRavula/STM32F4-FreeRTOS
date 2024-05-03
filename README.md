@@ -145,54 +145,102 @@ Just run make command
 
 vlab@HYVLAB1:~/STM32F4-FreeRTOS$ make
 
-[CC] stm32f4xx_it.c 
+[CC] stm32f4xx_it.c
+
 [CC] system_stm32f4xx.c 
+
 [CC] main.c 
+
 [CC] syscalls.c 
+
 [CC] port.c 
+
 [CC] list.c 
+
 [CC] queue.c 
+
 [CC] tasks.c 
+
 [CC] event_groups.c 
+
 [CC] timers.c 
+
 [CC] heap_4.c 
+
 [CC] misc.c 
+
 [CC] stm32f4xx_dcmi.c 
+
 [CC] stm32f4xx_rtc.c 
+
 [CC] stm32f4xx_adc.c 
+
 [CC] stm32f4xx_dma.c 
-[CC] stm32f4xx_sai.c 
+
+[CC] stm32f4xx_sai.c
+
 [CC] stm32f4xx_can.c 
+
 [CC] stm32f4xx_dma2d.c 
+
 [CC] stm32f4xx_sdio.c 
+
 [CC] stm32f4xx_cec.c 
+
 [CC] stm32f4xx_dsi.c 
+
 [CC] stm32f4xx_i2c.c 
+
 [CC] stm32f4xx_spdifrx.c 
+
 [CC] stm32f4xx_crc.c 
+
 [CC] stm32f4xx_exti.c 
+
 [CC] stm32f4xx_iwdg.c 
-[CC] stm32f4xx_spi.c 
+
+[CC] stm32f4xx_spi.c
+
 [CC] stm32f4xx_flash.c 
+
 [CC] stm32f4xx_lptim.c 
-[CC] stm32f4xx_syscfg.c 
+
+[CC] stm32f4xx_syscfg.c
+
 [CC] stm32f4xx_flash_ramfunc.c 
+
 [CC] stm32f4xx_ltdc.c 
+
 [CC] stm32f4xx_tim.c 
+
 [CC] stm32f4xx_pwr.c 
+
 [CC] stm32f4xx_usart.c 
+
 [CC] stm32f4xx_fmpi2c.c 
+
 [CC] stm32f4xx_qspi.c 
+
 [CC] stm32f4xx_wwdg.c 
+
 [CC] stm32f4xx_dac.c 
+
 [CC] stm32f4xx_fsmc.c 
+
 [CC] stm32f4xx_rcc.c 
+
 [CC] stm32f4xx_dbgmcu.c 
-[CC] stm32f4xx_gpio.c 
+
+[CC] stm32f4xx_gpio.c
+
 [CC] stm32f4xx_rng.c 
-[AS] startup_stm32f4xx.s 
+
+[AS] startup_stm32f4xx.s
+
 [LD] FreeRTOS.elf 
+
 [HEX] FreeRTOS.hex 
+
 [BIN] FreeRTOS.bin 
 
 Debugging
@@ -203,18 +251,31 @@ Debugging
 -Flasing using stlink-tools installed from terminal,
 
 vlab@HYVLAB1:~/STM32F4-FreeRTOS$ sudo st-flash write binary/FreeRTOS.bin 0x8000000
+
 st-flash 1.6.0
+
 2024-03-21T11:57:16 INFO common.c: Loading device parameters....
+
 2024-03-21T11:57:16 INFO common.c: Device connected is: F4 device (low power) - stm32f411re, id 0x10006431
+
 2024-03-21T11:57:16 INFO common.c: SRAM size: 0x20000 bytes (128 KiB), Flash: 0x80000 bytes (512 KiB) in pages of 16384 bytes
+
 2024-03-21T11:57:16 INFO common.c: Attempting to write 29796 (0x7464) bytes to stm32 address: 134217728 (0x8000000)
+
 Flash page at addr: 0x08000000 erasedEraseFlash - Sector:0x1 Size:0x40Flash page at addr: 0x08004000 erased
+
 2024-03-21T11:57:17 INFO common.c: Finished erasing 2 pages of 16384 (0x4000) bytes
+
 2024-03-21T11:57:17 INFO common.c: Starting Flash write for F2/F4/L4
+
 2024-03-21T11:57:17 INFO flash_loader.c: Successfully loaded flash loader in sram
+
 enabling 32-bit flash writes
+
 size: 29796
+
 2024-03-21T11:57:17 INFO common.c: Starting verification of write complete
+
 2024-03-21T11:57:18 INFO common.c: Flash written and verified! jolly good!
 
 
@@ -227,44 +288,72 @@ size: 29796
 -if it says already in use then we have to kill the process -->execute this command "sudo lsof -i :4242".
 
 vlab@HYVLAB1:~/STM32F4-FreeRTOS$ sudo lsof -i :4242
+
 COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+
 st-util 15345 root   10u  IPv4 189829      0t0  TCP *:4242 (LISTEN)
+
 Use this PID to kill it -->"kill 15345"
 
 -Make not of port number, which says "Listening at"
 
 vlab@HYVLAB1:~/STM32F4-FreeRTOS$ sudo lsof -i :4242
+
 st-util 1.6.0
+
 2024-05-03T11:22:15 INFO usb.c: -- exit_dfu_mode
+
 2024-05-03T11:22:15 INFO common.c: Loading device parameters....
+
 2024-05-03T11:22:15 INFO common.c: Device connected is: F4 device (low power) - stm32f411re, id 0x10006431
+
 2024-05-03T11:22:15 INFO common.c: SRAM size: 0x20000 bytes (128 KiB), Flash: 0x80000 bytes (512 KiB) in pages of 16384 bytes
+
 2024-05-03T11:22:15 INFO gdb-server.c: Chip ID is 00000431, Core ID is  2ba01477.
+
 2024-05-03T11:22:15 INFO gdb-server.c: Listening at *:4242...
 
 -Using GDB debugger
+
 Open another terminal window and run the below command
 
 vlab@HYVLAB1:~/STM32F4-FreeRTOS$ arm-none-eabi-gdb binary/FreeRTOS.elf
+
 GNU gdb (GNU Arm Embedded Toolchain 10.3-2021.10) 10.2.90.20210621-git
+
 Copyright (C) 2021 Free Software Foundation, Inc.
+
 ...........
+
 ...........
+
 ...........
+
 (gdb) tar ext :4242 (#Extended remote:-With target extended-remote mode-When the debugged program exits or you detach from it, GDB remains
 connected to the target, even though no program is running.)
+
 Remote debugging using :4242
+
 0x08002958 in Reset_Handler ()
+
 (gdb) b main (#Breakpoints)
+
 Breakpoint 1 at 0x80007fc: file main.c, line 20.
+
 Note: automatically using hardware breakpoints for read-only addresses.
+
 (gdb) c (#Continue)
+
 Continuing.
 
 Program received signal SIGTRAP, Trace/breakpoint trap.
+
 prvGetRegistersFromStack (pulFaultStackAddress=0x2001ffd8)
+
     at /home/vlab/STM32F4-FreeRTOS/hardware/stm32f4xx_it.c:87
+    
 87	  __ASM volatile("BKPT #02");
+
 (gdb) 
 
 *Refer GDB Cheet in DiscoSetup/ for more debugging commands
@@ -277,16 +366,27 @@ Installed minicom using "sudo apt install minicom"
 Creating Symlink for the port
 
 -To verify if symlink is there or not -->"dmesg | grep ttyUSB",if it gives empty output then we have to create the symlink manually
+
 -Run the commmand -->"lusb"
+
 vlab@HYVLAB1:~/STM32F4-FreeRTOS$ lsusb
+
 Bus 002 Device 002: ID 8087:8000 Intel Corp. 
+
 Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
 Bus 001 Device 002: ID 8087:8008 Intel Corp. 
+
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
 Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+
 Bus 003 Device 002: ID 046d:c31d Logitech, Inc. Media Keyboard K200
+
 Bus 003 Device 003: ID 046d:c077 Logitech, Inc. M105 Optical Mouse
+
 Bus 003 Device 028: ID 0483:3748 STMicroelectronics ST-LINK/V2
+
 Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 -It appears that your STM32F4 board is recognized as Bus 003 Device 028 (These numbers may change): ID 0483:3748 STMicroelectronics ST-LINK/V2 when you run
