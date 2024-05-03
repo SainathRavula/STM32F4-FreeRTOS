@@ -1,13 +1,17 @@
 This repository contains FreeRtos porting coding for STM32F4 board.
 
 -->Refering these links
-https://github.com/wangyeee/STM32F4-FreeRTOS
-https://github.com/stlink-org/stlink?tab=readme-ov-file
+>> https://github.com/wangyeee/STM32F4-FreeRTOS
+>> https://github.com/stlink-org/stlink?tab=readme-ov-file
 
 blue board-->stm32f411e (MB1115D)
 green board-->stm32f411e (Mb1115B)
+
+Setting the Work Bench 
 ================================================================================================
->>Toolchain for arm cortex-m
+
+Toolchain for arm cortex-m
+===========================
 
 -->installing gcc-arm-none-eabi toolchain using, "sudo apt install gcc-arm-none-eabi" -->[ps:don't install it like this GDB debugger is not working] 
 *This toolchain provides the GNU Compiler Collection (GCC) targeting the ARM architecture without any embedded operating system (bare-metal)
@@ -62,8 +66,9 @@ vlab@HYVLAB1:~/STM32F4-FreeRTOS$
 
 
  
+
+ST-LINK Utility
 ================================================================================================
->>ST-LINK Utility
 
 -->stlink utilty installed from terminal "sudo apt install stlink-tools"
 
@@ -78,8 +83,9 @@ openocd: "\x34\x3f\x6a\x06\x30\x4d\x58\x34\x55\x35\x04\x43"
 
 *conlusion for stlink utility --> use the stlink utility downloaded from terminal "sudo apt install stlink-tools"
  and if the board is not connected perfectly with "sudo st-info --probe" then use  the forced option "sudo st-info --probe --connect-under-reset"
+ 
+Compiling STM32F4-FreeRTOS 
 ================================================================================================
->>Compiling STM32F4-FreeRTOS 
 
 -->Setting toolchain
 *Compiling is possible only if "arm-none-eabi-gcc" tool chain is installed.
@@ -141,9 +147,8 @@ vlab@HYVLAB1:~/STM32F4-FreeRTOS$ make
 [HEX] FreeRTOS.hex
 [BIN] FreeRTOS.bin
 
-=======================================================================================================================================
-
->>Debugging
+Debugging
+================================================================================================
 
 -->Flashing
 
@@ -212,11 +217,8 @@ prvGetRegistersFromStack (pulFaultStackAddress=0x2001ffd8)
 
 *Refer GDB Cheet in DiscoSetup/ for more debugging commands
 
-
-
-====================================================================================================
-
->>Observing output
+Observing output
+================================================================================================
 
 -->Installed minicom using "sudo apt install minicom"
 -->Creating Symlink for the port
