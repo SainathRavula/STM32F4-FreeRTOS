@@ -10,7 +10,7 @@ green board-->stm32f411e (Mb1115B)
 Setting up the Work Bench 
 ================================================================================================
 
-Toolchain for arm cortex-m
+Toolchain for arm processors
 ===========================
 
 Installing gcc-arm-none-eabi toolchain using, "sudo apt install gcc-arm-none-eabi" -->[ps:don't install it like this GDB debugger is not working] 
