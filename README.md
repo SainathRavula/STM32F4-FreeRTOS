@@ -1,4 +1,4 @@
-This repository contains FreeRtos porting for STM32F4 board.
+This repository contains demo project of porting FreeRtos to STM32F4 by linux using Makefile.(STM32F417).
 
 -->Refering these link
 
