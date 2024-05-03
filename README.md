@@ -1,5 +1,3 @@
-# STM32F4-FreeRTOS
-=======
 This repository contains FreeRtos porting for STM32F4 board.
 
 
@@ -517,7 +515,7 @@ vlab@HYVLAB1:~/STM32F4-FreeRTOS$
  
 
 ST-LINK Utility
-================================================================================================
+===============
 
 stlink utilty installed from terminal "sudo apt install stlink-tools".
 
@@ -541,7 +539,7 @@ openocd: "\x34\x3f\x6a\x06\x30\x4d\x58\x34\x55\x35\x04\x43"
  and if the board is not connected perfectly with "sudo st-info --probe" then use  the forced option "sudo st-info --probe --connect-under-reset"
  
 Compiling STM32F4-FreeRTOS 
-================================================================================================
+==========================
 
 Setting toolchain
 
@@ -772,7 +770,7 @@ prvGetRegistersFromStack (pulFaultStackAddress=0x2001ffd8)
 *Refer GDB Cheet in DiscoSetup/ for more debugging commands
 
 Observing output
-================================================================================================
+================
 
 Installed minicom using "sudo apt install minicom"
 
