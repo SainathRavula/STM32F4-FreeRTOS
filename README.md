@@ -1,8 +1,7 @@
-This repository contains FreeRtos porting coding for STM32F4 board.
+This repository contains FreeRtos porting for STM32F4 board.
 
 -->Refering these links
->> https://github.com/wangyeee/STM32F4-FreeRTOS
->> https://github.com/stlink-org/stlink?tab=readme-ov-file
+https://github.com/wangyeee/STM32F4-FreeRTOS and  https://github.com/stlink-org/stlink?tab=readme-ov-file
 
 blue board-->stm32f411e (MB1115D)
 green board-->stm32f411e (Mb1115B)
