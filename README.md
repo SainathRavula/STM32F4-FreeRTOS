@@ -7,7 +7,7 @@ blue board-->stm32f411e (MB1115D)
 
 green board-->stm32f411e (Mb1115B)
 
-Setting the Work Bench 
+Setting up the Work Bench 
 ================================================================================================
 
 Toolchain for arm cortex-m
