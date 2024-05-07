@@ -44,7 +44,7 @@ vpath  %.s $(STARTUP)
 #	@echo "Value of vpath: $(vpath)"
 .PHONY : print
 
-ASRC		= startup_stm32f4xx.s   #Before:ASRC=startup_stm32f4xx.s  #####
+ASRC		= startup_stm32f4xx.s   
 
 # Project Source Files
 SRC		+= stm32f4xx_it.c
